@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task 6</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>Задача 6</h1>
+    <div>
+      <p>
+        З клавіатури вводяться вартість товару та кількість одиниць 3
+        товарів.<br />
+        Обчислити вартість кожного товару окремо та загальну вартість. <br />
+        Вивести чек (як у супермаркеті) використовуючи елементи розмітки
+      </p>
+    </div>
+    <script>
+      // Введення необхідних даних
+      //1 товар
+      let boxCount = parseInt(prompt("Кількість ящиків", "0")); //ціле число
+      let boxWeight = parseFloat(prompt("Вага одного ящика", "0")); //дійсне число
+      let boxPrice = parseFloat(prompt("Ціна за 1 кілограм", "0")); //дійсне число
+      //2 товар
+      let bottlesMilk = parseInt(prompt("Кількість пляшок", "0")); //ціле число
+      let bottlesMilkPrice = parseFloat(prompt("Ціна за 1 пляшку", "0")); //дійсне число
+      //3 товар
+      let paparBag = parseInt(prompt("Кількість паперових пакетів", "0")); //ціле число
+      let paparBagPrice = parseFloat(prompt("Ціна за 1 пакет", "0")); //дійсне число
+      //Обчислення результату
+      let sum1 = boxCount * boxWeight;
+      let sum2 = sum1 * boxPrice;
+      let sam3 = bottlesMilk * bottlesMilkPrice;
+      let sam4 = paparBag * paparBagPrice;
+      let totalSam = sum2 + sam3 + sam4;
+      //Виводимо результат
+      document.write(
+        `Вартість картоплі: ${sum1} кг * ${boxPrice} грн/кг = ${sum2.toFixed(
+          2
+        )} грн`
+      );
+      document.write(
+        `<br> Вартість молока: ${bottlesMilk} шт * ${bottlesMilkPrice} грн = ${sam3} грн`
+      );
+      document.write(
+        `<br> Вартість паперового пакету: ${paparBag} шт * ${paparBagPrice} грн =  ${sam4.toFixed(2)} грн`
+      );
+
+      document.write(`<br><br> Сума до сплати: ${totalSam.toFixed(2)} грн`);
+    </script>
+  </body>
+</html>

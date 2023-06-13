@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 0</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>Задача 0</h1>
+
+    <div>
+      <p>Обчислити значення виразів</p>
+		<a target="_blank" href="main-index.html"></a>
+      <p>
+        s1=a+12+b <br />
+        s2=sqrt(a+b/12) <br />
+        s3=cbrt((a+b)c) <br />
+        s4=sin(a/-b)
+      </p>
+    </div>
+    <script>
+      let a = parseInt(prompt("Введіть a", "0"));
+      let b = parseInt(prompt("Введіть b", "0"));
+      let c = parseInt(prompt("Введіть c", "0"));
+      // Знаходимо s1
+      let s1 = a + 12 + b;
+      // Знаходимо s2
+      let s2 = Math.sqrt(a + b / 12);
+      // Знаходимо s3
+      let s3 = Math.cbrt((a + b) * c);
+      // Знаходимо s4
+      let s4 = Math.sin(a / -b);
+      // Виводимо результат
+      document.write(`s1 = ${s1}`);
+      document.write(`<br> s2 = ${s2}`);
+      document.write(`<br> s3 = ${s3}`);
+      document.write(`<br> s4 = ${s4}`);
+    </script>
+  </body>
+</html>
